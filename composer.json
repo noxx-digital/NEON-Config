@@ -20,7 +20,7 @@
     "autoload": {
         "psr-4": {
             "Neon\\Config\\": "src/",
-            "Neon\\Config\\Exception": "src/Exception"
+            "Neon\\Config\\Exception\\": "src/Exception"
         }
     }
 }
