@@ -21,7 +21,7 @@ class ConfigManager
     /**
      * @var array
      */
-    private array $mandatory_fields;
+    private array $required_fields;
 
     /**
      * @param string $ini_path
@@ -43,22 +43,22 @@ class ConfigManager
      *
      * @return void
      */
-    public function set_mandatory_field( string $field_name )
+    public function set_required_field( string $field_name )
     {
-        $this->mandatory_fields[] = $field_name;
+        $this->required_fields[] = $field_name;
     }
 
     /**
      * @return void
      * @throws MissingConfigSettingException
      */
-    public function check_mandartory_fields(): void
+    public function check_required_fields(): void
     {
-          if( sizeof( $this->mandatory_fields ) > 0 )
-              foreach( $this->mandatory_fields as $key => $value )
+          if( sizeof( $this->required_fields ) > 0 )
+              foreach( $this->required_fields as $key => $value )
                   if( !key_exists( $key, $this->config_data ))
                       throw new MissingConfigSettingException(
-                          "ConfigurationError: Missing mandatory config field: ('.$key.')\n"
+                          "ConfigurationError: Missing required config field: ('.$key.')\n"
                       );
     }
 
@@ -73,7 +73,7 @@ class ConfigManager
         else
             throw new FileNotFoundException( 'FileNotFoundException: ini file not found at \''.$this->ini_path.'\'' );
 
-        $this->check_mandartory_fields();
+        $this->check_required_fields();
     }
 
     /**
