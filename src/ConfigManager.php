@@ -64,7 +64,7 @@ class ConfigManager
      * @return void
      * @throws MissingConfigSettingException|FileNotFoundException
      */
-    public function ini_load(): void
+    public function load_config(): void
     {
         if ( is_file( $this->ini_path ) )
             $this->config_data = parse_ini_file( $this->ini_path, $this->process_sections, $this->scanner_mode );

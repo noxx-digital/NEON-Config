@@ -18,4 +18,5 @@ $config_mangager->set_required_field( 'foo' );
 $config_mangager->set_required_field( 'bar' );
 $config_mangager->ini_load();
 echo $config_mangager->foo;
+
 ```
