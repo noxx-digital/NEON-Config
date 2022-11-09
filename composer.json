@@ -1,8 +1,13 @@
 {
     "name": "noxx/neon-config",
-    "description": "Small config parser.",
+    "description": "Config manager that that parses ini file, validates required fields and provides read-only access.",
+    "keywords": ["config","ini"],
+    "homepage": "https://github.com/noxx-digital",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "php": ">=8.1.0"
+    },
     "authors": [
         {
             "name": "Noxx",
@@ -15,7 +20,7 @@
     "autoload": {
         "psr-4": {
             "Neon\\Config\\": "src/",
-            "Neon\\Config\\Exception": "src/Exceptions"
+            "Neon\\Config\\Exception": "src/Exception"
         }
     }
 }
