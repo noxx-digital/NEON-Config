@@ -1,9 +1,9 @@
 <?php
 
-namespace Trinity;
+namespace Neon\Config;
 
-use MissingConfigSettingException;
-use FileNotFoundException;
+use Neon\Config\Exception\MissingConfigSettingException;
+use Neon\Config\Exception\FileNotFoundException;
 use OutOfBoundsException;
 
 class ConfigManager
@@ -25,13 +25,11 @@ class ConfigManager
 
     /**
      * @param string $ini_path
-     * @param bool $process_sections
-     * @param int $scanner_mode
      */
     public function __construct(
         string $ini_path,
-        private bool $process_sections=FALSE,
-        private int $scanner_mode=INI_SCANNER_NORMAL
+        # TODO private bool $process_sections=FALSE,
+        # TODO private int $scanner_mode=INI_SCANNER_NORMAL
     )
     {
         $this->config_data  = [];
