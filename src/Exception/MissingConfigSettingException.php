@@ -1,6 +1,6 @@
 <?php
 
-namespace Neon\Config\Exception;
+namespace Neon\Config;
 
 use Exception;
 

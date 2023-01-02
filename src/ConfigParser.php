@@ -2,9 +2,6 @@
 
 namespace Neon\Config;
 
-use Neon\Config\Exception\FileNotFoundException;
-use Neon\Config\Exception\IniParseException;
-
 class ConfigParser
 {
     /**
